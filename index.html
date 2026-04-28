@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="ko"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8" /&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
+<p class="p1">&lt;title&gt;한국 뷰티 브랜드 검색기&lt;/title&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>:root {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--bg: #ffffff; --bg2: #f7f7f5; --bg3: #f0efea;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--text: #1a1a1a; --text2: #6b6b6b; --text3: #a0a0a0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--border: rgba(0,0,0,0.1); --border2: rgba(0,0,0,0.18);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--info-bg: #e6f1fb; --info-text: #0c447c;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--radius-md: 8px; --radius-lg: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>@media (prefers-color-scheme: dark) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>:root {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--bg: #1e1e1e; --bg2: #2a2a2a; --bg3: #333333;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--text: #f0f0f0; --text2: #aaaaaa; --text3: #666666;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--border: rgba(255,255,255,0.1); --border2: rgba(255,255,255,0.2);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--info-bg: #0c2a44; --info-text: #85b7eb;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>body { font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans KR', sans-serif; background: var(--bg3); color: var(--text); min-height: 100vh; padding: 2rem 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.page { max-width: 760px; margin: 0 auto; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>header { margin-bottom: 2rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>header h1 { font-size: 22px; font-weight: 600; margin-bottom: 4px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>header p { font-size: 14px; color: var(--text2); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.search-row { display: flex; gap: 8px; margin-bottom: 12px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.search-row input { flex: 1; padding: 10px 14px; font-size: 14px; background: var(--bg); border: 0.5px solid var(--border2); border-radius: var(--radius-md); color: var(--text); outline: none; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.search-row input:focus { border-color: #378add; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>button { padding: 10px 18px; font-size: 13px; cursor: pointer; background: var(--bg); border: 0.5px solid var(--border2); border-radius: var(--radius-md); color: var(--text); transition: background 0.15s; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>button:hover { background: var(--bg2); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.cat-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 1.25rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.cat-btn { font-size: 12px; padding: 5px 13px; border-radius: 20px; border: 0.5px solid var(--border); background: transparent; color: var(--text2); cursor: pointer; transition: all 0.15s; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.cat-btn.on { background: var(--bg); color: var(--text); border-color: var(--border2); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.count { font-size: 12px; color: var(--text2); margin-bottom: 12px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 10px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.card { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 1rem 1.25rem; cursor: pointer; transition: border-color 0.15s; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.card:hover { border-color: var(--border2); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.card-top { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.card-icon { width: 36px; height: 36px; border-radius: 8px; background: var(--bg2); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.card-name { font-size: 14px; font-weight: 500; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.card-en { font-size: 11px; color: var(--text3); margin-top: 2px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.card-desc { font-size: 12px; color: var(--text2); line-height: 1.5; margin-bottom: 8px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.tags { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 10px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.tag { font-size: 11px; padding: 2px 7px; border-radius: 10px; background: var(--bg2); color: var(--text2); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.card-btn { width: 100%; padding: 7px; font-size: 12px; border: 0.5px solid var(--border2); border-radius: var(--radius-md); background: transparent; color: var(--text); cursor: pointer; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.card-btn:hover { background: var(--bg2); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.empty { text-align: center; padding: 3rem; color: var(--text3); grid-column: 1/-1; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 100; align-items: center; justify-content: center; padding: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.overlay.open { display: flex; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.modal { background: var(--bg); border-radius: var(--radius-lg); border: 0.5px solid var(--border2); width: 100%; max-width: 600px; max-height: 90vh; overflow-y: auto; padding: 1.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.modal-head { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.modal-brand { display: flex; align-items: center; gap: 12px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.modal-icon { width: 46px; height: 46px; border-radius: 10px; background: var(--bg2); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.modal-title { font-size: 17px; font-weight: 600; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.modal-en { font-size: 12px; color: var(--text3); margin-top: 2px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.close-btn { background: none; border: none; font-size: 18px; cursor: pointer; color: var(--text2); padding: 2px 6px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.modal-url { display: inline-block; font-size: 12px; color: var(--info-text); margin-bottom: 1.25rem; word-break: break-all; text-decoration: none; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.modal-url:hover { text-decoration: underline; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.section-label { font-size: 11px; font-weight: 600; color: var(--text3); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 8px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.prods { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 8px; margin-bottom: 1.25rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.prod { background: var(--bg2); border-radius: var(--radius-md); padding: 12px 14px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.prod-name { font-size: 13px; font-weight: 500; margin-bottom: 5px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.prod-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 6px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.prod-meta span { font-size: 11px; padding: 2px 7px; background: var(--bg); border: 0.5px solid var(--border); border-radius: 6px; color: var(--text2); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.prod-point { font-size: 12px; color: var(--text2); line-height: 1.5; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.ai-box { background: var(--bg2); border-radius: var(--radius-md); padding: 14px 16px; margin-bottom: 1.25rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.ai-label { font-size: 11px; color: var(--text3); margin-bottom: 6px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.ai-text { font-size: 13px; color: var(--text); line-height: 1.7; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.modal-actions { display: flex; gap: 8px; flex-wrap: wrap; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.modal-actions button { font-size: 13px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.modal-actions .primary { backgrou</p>
+</body>
+</html>
